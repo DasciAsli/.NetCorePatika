@@ -25,3 +25,14 @@ C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\obj\Debug\n
 C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\obj\Debug\net6.0\WebApi.pdb
 C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
