@@ -38,3 +38,4 @@ C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\n
 C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\aslid\Desktop\Orta Seviye .Net Core Patika\BookStore\WebApi\bin\Debug\net6.0\FluentValidation.dll
