@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uML6VmDkQRIi4OVWDVwxy8Tpff20EcMsn3FMn18X4apBPyY7cF2GJDgsq/AUDUFAAmlq2kXpdIn7HvEja64T1Q==",
+  "dgSpecHash": "nXhVBYbS6gzGddPWkHzWnr9hUDsGA1qf1D4GFHFAzYJzWzGr+4iSQeTgyo1hEMAyluF0rW4NMRjMl5xf2NEWEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aslid\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\aslid\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\aslid\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\aslid\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0-rc.2.22472.11\\microsoft.entityframeworkcore.7.0.0-rc.2.22472.11.nupkg.sha512",
     "C:\\Users\\aslid\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0-rc.2.22472.11\\microsoft.entityframeworkcore.abstractions.7.0.0-rc.2.22472.11.nupkg.sha512",
     "C:\\Users\\aslid\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0-rc.2.22472.11\\microsoft.entityframeworkcore.analyzers.7.0.0-rc.2.22472.11.nupkg.sha512",

@@ -1,3 +1,4 @@
+using AutoMapper;
 using WebApi.DBOperations;
 
 namespace WebApi.BookOperations.UpdateBook
@@ -6,10 +7,12 @@ namespace WebApi.BookOperations.UpdateBook
     {
         public UpdateBookModel Model { get; set; }
         public int Id { get; set; }
-        private BookStoreDbContext _dbContext;
-        public UpdateBookCommand(BookStoreDbContext dbContext)
+        private readonly BookStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
+        public UpdateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
         {
-            _dbContext =dbContext;
+            _dbContext = dbContext;
+            _mapper = mapper;
         }
         public void Handle()
         {
@@ -20,11 +23,9 @@ namespace WebApi.BookOperations.UpdateBook
             }
             else
             {
-                book.Title = Model.Title != default ? Model.Title : book.Title;
-                book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
-                book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
-                book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
+                book=_mapper.Map(Model,book); //Updatede bu şekilde kullanmak gerekiyor mapi
                 _dbContext.SaveChanges();
+
             }
 
         }     

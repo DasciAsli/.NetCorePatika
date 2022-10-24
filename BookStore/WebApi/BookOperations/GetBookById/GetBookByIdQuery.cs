@@ -1,3 +1,4 @@
+using AutoMapper;
 using WebApi.Common;
 using WebApi.DBOperations;
 
@@ -6,10 +7,12 @@ namespace WebApi.BookOperations.GetBookById
     public class GetBookByIdQuery
     {
         public int Id { get; set; }
-        private BookStoreDbContext _dbContext;
-        public GetBookByIdQuery(BookStoreDbContext dbContext)
+        private readonly BookStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
+        public GetBookByIdQuery(BookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         public GetBookByIdModel Handle()
@@ -18,11 +21,7 @@ namespace WebApi.BookOperations.GetBookById
 
             if (book != null)
             {
-                GetBookByIdModel vm = new GetBookByIdModel();
-                vm.Title = book.Title;
-                vm.PageCount = book.PageCount;
-                vm.PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy");
-                vm.Genre = ((GenreEnum)book.GenreId).ToString();
+                GetBookByIdModel vm = _mapper.Map<GetBookByIdModel>(book);//book'u GetBookByIdModel'e dönüştür
                 return vm;
             }
             else
