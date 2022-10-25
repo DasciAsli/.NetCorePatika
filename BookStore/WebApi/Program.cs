@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
+using WebApi.Middlewares;
 
 internal class Program
 {
@@ -36,6 +37,8 @@ internal class Program
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
+
+        app.UseCustomExceptionMiddleware();//Custom middleware
 
         app.MapControllers();
 
