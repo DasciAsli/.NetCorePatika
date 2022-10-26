@@ -1,13 +1,14 @@
 
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApi{
+namespace WebApi.Entities{
     public class Book
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Title { get; set; }
         public int GenreId { get; set; }
+        public Genre Genre{get; set;} //Genre Foreign Key.Book Entitysi ile Genre Entitysi arasında bir ilişki kurulmuş oldu
         public int PageCount { get; set; }
         public DateTime PublishDate { get; set; }
         

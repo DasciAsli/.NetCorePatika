@@ -4,14 +4,13 @@ using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.DeleteBook;
-using WebApi.BookOperations.GetBookById;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.UpdateBook;
+using WebApi.Application.BookOperations.Commands.CreateBook;
+using WebApi.Application.BookOperations.Commands.DeleteBook;
+using WebApi.Application.BookOperations.Commands.UpdateBook;
+using WebApi.Application.BookOperations.Queries.GetBookById;
+using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.DBOperations;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
+
 
 namespace WebApi.Controllers
 {
@@ -27,7 +26,6 @@ namespace WebApi.Controllers
             _mapper = mapper;
         }
 
-        //GET İŞLEMLERİ
         [HttpGet]
         public IActionResult GetBooks()
         {
@@ -50,7 +48,6 @@ namespace WebApi.Controllers
 
         }
 
-        //POST İŞLEMİ  
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
@@ -64,7 +61,6 @@ namespace WebApi.Controllers
 
         }
 
-        //PUT İŞLEMİ
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, [FromBody] UpdateBookModel updatedBook)
         {
@@ -78,8 +74,6 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-
-        //DELETE İŞLEMİ
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {
