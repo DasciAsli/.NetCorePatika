@@ -2,6 +2,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Middlewares;
+using WebApi.Services;
 
 internal class Program
 {
@@ -17,6 +18,7 @@ internal class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddDbContext<BookStoreDbContext>(options=>options.UseInMemoryDatabase(databaseName:"BookStoreDB"));
         builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());//Automapper'ı servis olarak kullanabilmek için ekliyoruz.
+        builder.Services.AddSingleton<ILoggerService,DBLogger>();
        
 
 
