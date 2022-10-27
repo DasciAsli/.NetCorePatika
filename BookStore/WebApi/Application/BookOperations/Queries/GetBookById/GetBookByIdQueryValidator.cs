@@ -6,7 +6,7 @@ namespace WebApi.Application.BookOperations.Queries.GetBookById
     {
         public GetBookByIdQueryValidator()
         {
-            RuleFor(query=>query.Id).GreaterThan(0);        
+            RuleFor(query=>query.Id).GreaterThan(0);
         }
     }
 }

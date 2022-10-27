@@ -1,5 +1,9 @@
 using AutoMapper;
 using FluentValidation.Validators;
+using WebApi.Application.AuthOperations.Commands.CreateAuthor;
+using WebApi.Application.AuthOperations.Commands.UpdateAuthor;
+using WebApi.Application.AuthOperations.Queries.GetAuthorById;
+using WebApi.Application.AuthOperations.Queries.GetAuthors;
 using WebApi.Application.BookOperations.Commands.CreateBook;
 using WebApi.Application.BookOperations.Commands.UpdateBook;
 using WebApi.Application.BookOperations.Queries.GetBookById;
@@ -16,8 +20,8 @@ namespace WebApi.Common
         public MappingProfile()
         {
             //Book
-            CreateMap<Book,BooksViewModel>().ForMember(dest =>dest.Genre,opt=>opt.MapFrom(src=>src.Genre.Name));
-            CreateMap<Book,GetBookByIdModel>().ForMember(dest =>dest.Genre,opt=>opt.MapFrom(src=>src.Genre.Name));//Genreyi maplerken neye göre maplemesi gerektiğini belirtmiş olduk
+            CreateMap<Book,BooksViewModel>().ForMember(dest =>dest.Genre,opt=>opt.MapFrom(src=>src.Genre.Name)).ForMember(dest => dest.Author,opt => opt.MapFrom(src => src.Author.Name +" "+ src.Author.Surname));
+            CreateMap<Book,GetBookByIdModel>().ForMember(dest =>dest.Genre,opt=>opt.MapFrom(src=>src.Genre.Name)).ForMember(dest => dest.Author,opt => opt.MapFrom(src => src.Author.Name +" "+ src.Author.Surname));//Genreyi maplerken neye göre maplemesi gerektiğini belirtmiş olduk
             CreateMap<CreateBookModel,Book>();//CreateBookModel objesi Book objesine maplenebilir olsun.
             CreateMap<UpdateBookModel,Book>();
 
@@ -25,6 +29,12 @@ namespace WebApi.Common
             CreateMap<Genre,GenresViewModel>(); //Genreyı GenresViewModele dönüştür.
             CreateMap<Genre,GetGenreByIdModel>();
             CreateMap<CreateGenreModel,Genre>();
+
+            //Author
+            CreateMap<Author,AuthorsViewModel>();
+            CreateMap<Author,GetAuthorByIdModel>();
+            CreateMap<CreateAuthorModel,Author>();
+            CreateMap<UpdateAuthorModel,Author>();
         }
     }
 }

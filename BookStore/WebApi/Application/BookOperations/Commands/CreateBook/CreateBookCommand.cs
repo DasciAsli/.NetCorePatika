@@ -23,6 +23,14 @@ namespace WebApi.Application.BookOperations.Commands.CreateBook
             {
                 throw new InvalidOperationException("Kitap zaten mevcut");
             }
+            if (!(_dbcontext.Authors.Any(a => a.Id == Model.AuthorId)))
+            {
+                throw new InvalidOperationException("Yazar bulunamadığı için kitap eklenemedi");
+            }
+            if (!(_dbcontext.Genres.Any(g => g.Id == Model.GenreId)))
+            {
+                throw new InvalidOperationException("Kitap türü bulunamadığı için kitap eklenemedi");
+            }
 
             book = _mapper.Map<Book>(Model); //Model ile gelen veriyi Book objesine convert et.MappingProfile sınıfından faydalandı
             _dbcontext.Books.Add(book);
@@ -37,6 +45,7 @@ namespace WebApi.Application.BookOperations.Commands.CreateBook
     {
         public string Title { get; set; }
         public int GenreId { get; set; }
+        public int AuthorId { get; set; }
         public int PageCount { get; set; }
         public DateTime PublishDate { get; set; }
     }
