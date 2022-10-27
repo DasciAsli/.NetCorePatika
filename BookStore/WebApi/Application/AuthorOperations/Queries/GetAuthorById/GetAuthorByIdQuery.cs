@@ -1,7 +1,7 @@
 using AutoMapper;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.AuthOperations.Queries.GetAuthorById
+namespace WebApi.Application.AuthorOperations.Queries.GetAuthorById
 {
     public class GetAuthorByIdQuery
     {

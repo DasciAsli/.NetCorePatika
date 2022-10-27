@@ -1,9 +1,9 @@
 using AutoMapper;
 using FluentValidation.Validators;
-using WebApi.Application.AuthOperations.Commands.CreateAuthor;
-using WebApi.Application.AuthOperations.Commands.UpdateAuthor;
-using WebApi.Application.AuthOperations.Queries.GetAuthorById;
-using WebApi.Application.AuthOperations.Queries.GetAuthors;
+using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
+using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.Application.AuthorOperations.Queries.GetAuthorById;
+using WebApi.Application.AuthorOperations.Queries.GetAuthors;
 using WebApi.Application.BookOperations.Commands.CreateBook;
 using WebApi.Application.BookOperations.Commands.UpdateBook;
 using WebApi.Application.BookOperations.Queries.GetBookById;

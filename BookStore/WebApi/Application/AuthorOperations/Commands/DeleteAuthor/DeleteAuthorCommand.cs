@@ -1,6 +1,6 @@
 using WebApi.DBOperations;
 
-namespace WebApi.Application.AuthOperations.Commands.DeleteAuthor
+namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
 {
     public class DeleteAuthorCommand
     {

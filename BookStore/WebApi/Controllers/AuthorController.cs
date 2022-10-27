@@ -1,22 +1,22 @@
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.Application.AuthOperations.Commands.CreateAuthor;
-using WebApi.Application.AuthOperations.Commands.DeleteAuthor;
-using WebApi.Application.AuthOperations.Commands.UpdateAuthor;
-using WebApi.Application.AuthOperations.Queries.GetAuthorById;
-using WebApi.Application.AuthOperations.Queries.GetAuthors;
+using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
+using WebApi.Application.AuthorOperations.Commands.DeleteAuthor;
+using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.Application.AuthorOperations.Queries.GetAuthorById;
+using WebApi.Application.AuthorOperations.Queries.GetAuthors;
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]s")]
-    public class AuthController:ControllerBase
+    public class AuthorController:ControllerBase
     {
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
-        public AuthController(BookStoreDbContext context, IMapper mapper)
+        public AuthorController(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
