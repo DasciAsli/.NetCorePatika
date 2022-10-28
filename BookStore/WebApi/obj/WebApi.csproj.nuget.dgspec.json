@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj": {}
+    "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj": {
+    "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\aslid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\obj\\",
+        "outputPath": "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aslid\\AppData\\Roaming\\NuGet\\NuGet.Config",
