@@ -8,9 +8,9 @@ namespace WebApi.Application.AuthorOperations.Commands.UpdateAuthor
     {
         public int Id { get; set; }
         public UpdateAuthorModel Model;
-        private readonly BookStoreDbContext _dbcontext;
+        private readonly IBookStoreDbContext _dbcontext;
         private readonly IMapper _mapper;
-        public UpdateAuthorCommand(BookStoreDbContext dbcontext, IMapper mapper)
+        public UpdateAuthorCommand(IBookStoreDbContext dbcontext, IMapper mapper)
         {
             _dbcontext = dbcontext;
             _mapper = mapper;

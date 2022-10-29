@@ -18,9 +18,9 @@ namespace WebApi.Controllers
     [Route("[controller]s")]
     public class BookController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
-        public BookController(BookStoreDbContext context, IMapper mapper)
+        public BookController(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -87,24 +87,6 @@ namespace WebApi.Controllers
         }
 
 
-
-
-
-
-        //FromQuery ile Get
-        // [HttpGet]
-        // public Object Get([FromQuery] string id)
-        // {
-        //     var book=_context.Books.Where(book =>book.Id==(Convert.ToInt32(id))).SingleOrDefault();
-        //     if (book != null)
-        //     {
-        //     return book;
-        //     }
-        //     else
-        //     {
-        //         return "Kitap bulunamadı";
-        //     } 
-        // }
     }
 
 }

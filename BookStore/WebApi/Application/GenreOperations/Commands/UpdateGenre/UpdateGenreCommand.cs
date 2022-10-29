@@ -8,8 +8,8 @@ namespace WebApi.Application.GenreOperations.Commands.UpdateGenre
     {
         public UpdateGenreModel Model;
         public int Id { get; set; }
-        private readonly BookStoreDbContext _dbcontext;
-        public UpdateGenreCommand(BookStoreDbContext dbcontext)
+        private readonly IBookStoreDbContext _dbcontext;
+        public UpdateGenreCommand(IBookStoreDbContext dbcontext)
         {
             _dbcontext = dbcontext;
         }

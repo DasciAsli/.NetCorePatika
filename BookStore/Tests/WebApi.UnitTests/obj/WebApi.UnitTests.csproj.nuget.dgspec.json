@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {}
+    "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {
+    "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+        "projectUniqueName": "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
         "projectName": "WebApi.UnitTests",
-        "projectPath": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+        "projectPath": "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
         "packagesPath": "C:\\Users\\aslid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\obj\\",
+        "outputPath": "c:\\Users\\aslid\\Desktop\\Orta Seviye .Net Core Patika\\BookStore\\Tests\\WebApi.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aslid\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,14 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.8.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0-rc.2.22472.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0-rc.2.22472.11, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

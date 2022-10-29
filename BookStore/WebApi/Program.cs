@@ -13,16 +13,26 @@ internal class Program
         // Add services to the container.
 
         builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+       // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+         //InMemoryDatabase
         builder.Services.AddDbContext<BookStoreDbContext>(options=>options.UseInMemoryDatabase(databaseName:"BookStoreDB"));
-        builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());//Automapper'ı servis olarak kullanabilmek için ekliyoruz.
-        builder.Services.AddSingleton<ILoggerService,DBLogger>();
        
+        //Automapper'ı servis olarak kullanabilmek için ekliyoruz.
+        builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        
+        //Singleton,bu yaşam süresine sahip nesne, uygulamanın çalışmaya başladığı andan duruncaya kadar geçen tüm süre boyunca yalnızca bir kez oluşturulur ve her zaman aynı nesne kullanılır.
+        builder.Services.AddSingleton<ILoggerService,DBLogger>();
+
+        //Scope, inject edilen servisin sadece request geldiğinde instance'ini oluşturuyor ve o requeste istinaden bir response dönene kadar varlığını sürdürüyor.Response dönünce yok ediliyor.
+        builder.Services.AddScoped<IBookStoreDbContext>(provider =>provider.GetService<BookStoreDbContext>());//Bunu inject ettiğim yerlerde bu servis BookStoreDbContext'e karşılık geliyor.
 
 
         var app = builder.Build();
+
          using (var scope = app.Services.CreateScope())
          {
              var services = scope.ServiceProvider;
@@ -40,7 +50,8 @@ internal class Program
 
         app.UseAuthorization();
 
-        app.UseCustomExceptionMiddleware();//Custom middleware
+        //Custom middleware
+        app.UseCustomExceptionMiddleware();
 
         app.MapControllers();
 
