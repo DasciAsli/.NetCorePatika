@@ -21,6 +21,7 @@ namespace Tests.WebApi.UnitTests.TestSetup
             Context.AddGenres();
             Context.AddAuthors();
             Context.AddBooks();
+            Context.SaveChanges();
 
             //MAPPER
             //Mapping ayarlarını yapıyoruz.Bu ayarı yaparken WebApinin içerisindeki MappingProfile ayarlarını baz alarak bunu yapmasını söylüyoruz.
