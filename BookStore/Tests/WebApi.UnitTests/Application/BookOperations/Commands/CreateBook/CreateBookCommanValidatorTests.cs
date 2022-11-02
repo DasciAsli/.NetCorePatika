@@ -57,8 +57,5 @@ namespace Tests.WebApi.UnitTests.Application.BookOperations.Commands.CreateBook
 
         }
 
-
-
-
     }
 }

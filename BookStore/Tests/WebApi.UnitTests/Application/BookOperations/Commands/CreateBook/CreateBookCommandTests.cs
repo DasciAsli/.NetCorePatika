@@ -26,7 +26,7 @@ namespace Tests.WebApi.UnitTests.Application.BookOperations.Commands.CreateBook
         {
             //arrange(Hazırlık)
             var book = new Book() { Title = "Test_WhenAlreadyExistBookTitleIsGiven_InvalidOperationException_ShouldBeReturn", GenreId = 1, AuthorId = 1, PageCount = 100, PublishDate = new DateTime(1990, 01, 10) };
-            _context.Add(book);
+            _context.Books.Add(book);
             _context.SaveChanges();
 
             CreateBookCommand command = new CreateBookCommand(_context, _mapper);

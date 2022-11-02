@@ -37,8 +37,7 @@ namespace Tests.WebApi.UnitTests.Application.BookOperations.Queries.GetBookById
             query.Id = 2;
 
             //act 
-            FluentActions
-            .Invoking(() => query.Handle()).Invoke();
+            FluentActions.Invoking(() => query.Handle()).Invoke();
 
             //assert
             var book = _context.Books.SingleOrDefault(b=>b.Id==query.Id);
