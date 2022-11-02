@@ -1,17 +1,17 @@
 using AutoMapper;
 using FluentAssertions;
 using Tests.WebApi.UnitTests.TestSetup;
-using WebApi.Application.GenreOperations.Queries.GetGenreById;
+using WebApi.Application.AuthorOperations.Queries.GetAuthorById;
 using WebApi.DBOperations;
 
-namespace Tests.WebApi.UnitTests.Application.GenreOperations.Queries.GetGenreById
+namespace Tests.WebApi.UnitTests.Application.AuthorOperations.Queries.GetGenreById
 {
-    public class GetGenreByIdQueryTests : IClassFixture<CommonTestFixture>
+    public class GetAuthorByIdQueryTests : IClassFixture<CommonTestFixture>
     {
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetGenreByIdQueryTests(CommonTestFixture testFicture)
+        public GetAuthorByIdQueryTests(CommonTestFixture testFicture)
         {
             _context = testFicture.Context;
             _mapper = testFicture.Mapper;
@@ -21,32 +21,33 @@ namespace Tests.WebApi.UnitTests.Application.GenreOperations.Queries.GetGenreByI
         public void WhenGivenIdIsNotInDb_InvalidOperationException_ShouldBeReturn()
         {
             //arrange
-            GetGenreByIdQuery query = new GetGenreByIdQuery(_context, _mapper);
+            GetAuthorByIdQuery query = new GetAuthorByIdQuery(_context, _mapper);
             query.Id = 1800;
 
             //act & assert
             FluentActions
             .Invoking(() => query.Handle())
-            .Should().Throw<InvalidOperationException>().And.Message.Should().Be("Kitap türü bulunamadı");
+            .Should().Throw<InvalidOperationException>().And.Message.Should().Be("Yazar bulunamadı");
 
         }
 
         [Fact]
-        public void WhenGivenIdIsInDb_Genre_ShouldNotBeReturn()
+        public void WhenGivenIdIsInDb_Author_ShouldNotBeReturn()
         {
             //arrange
-            GetGenreByIdQuery query = new GetGenreByIdQuery(_context, _mapper);
+            GetAuthorByIdQuery query = new GetAuthorByIdQuery(_context, _mapper);
             query.Id = 3;
 
             //act 
             FluentActions.Invoking(() => query.Handle()).Invoke();
 
             //assert
-            var genre = _context.Genres.SingleOrDefault(g=>g.Id==query.Id);
-            genre.Should().NotBeNull();
-            
+            var author = _context.Authors.SingleOrDefault(a => a.Id == query.Id);
+            author.Should().NotBeNull();
+
 
         }
+
     }
 
 }

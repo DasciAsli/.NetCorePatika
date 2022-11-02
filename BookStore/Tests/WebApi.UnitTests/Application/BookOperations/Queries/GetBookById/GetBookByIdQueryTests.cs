@@ -30,7 +30,7 @@ namespace Tests.WebApi.UnitTests.Application.BookOperations.Queries.GetBookById
         }
 
         [Fact]
-        public void WhenGivenIdIsInDb_Book_ShouldNotBeReturnError()
+        public void WhenGivenIdIsInDb_Book_ShouldNotBeReturn()
         {
             //arrange
             GetBookByIdQuery query = new GetBookByIdQuery(_context, _mapper);

@@ -38,7 +38,7 @@ namespace Tests.WebApi.UnitTests.Application.GenreOperations.Commands.CreateGenr
         }
 
         [Fact]
-        public void WhenValidInputIsGiven_Genre_ShouldBeCreated()
+        public void WhenValidInputAreGiven_Genre_ShouldBeCreated()
         {
             //arrange
             CreateGenreCommand command= new CreateGenreCommand(_context,_mapper);
