@@ -11,6 +11,7 @@ using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.Application.GenreOperations.Commands.CreateGenre;
 using WebApi.Application.GenreOperations.Queries.GetGenreById;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
+using WebApi.Application.UserOperations.Commands.CreateUser;
 using WebApi.Entities;
 
 namespace WebApi.Common
@@ -35,6 +36,9 @@ namespace WebApi.Common
             CreateMap<Author,GetAuthorByIdModel>();
             CreateMap<CreateAuthorModel,Author>();
             CreateMap<UpdateAuthorModel,Author>();
+
+            //User
+            CreateMap<CreateUserModel,User>();
         }
     }
 }

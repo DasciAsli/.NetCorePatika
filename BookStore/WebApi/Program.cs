@@ -1,5 +1,9 @@
 using System.Reflection;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using WebApi.DBOperations;
 using WebApi.Middlewares;
 using WebApi.Services;
@@ -11,6 +15,25 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+
+        //Authentication
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+        {
+            //Token'ımızın nasıl çalışacağının ayarlarını yapıyoruz
+            opt.TokenValidationParameters = new TokenValidationParameters()
+            {
+                ValidateAudience=true,//Token'ı kimler kullanabilir.
+                ValidateIssuer = true,//Tokenın dağıtıcısı kim
+                ValidateLifetime = true,//Lifetime'ı kontrol et.
+                ValidateIssuerSigningKey=true,//Token'ı imzalayacağımız anahtar key
+                ValidIssuer =builder.Configuration["Token:Issuer"],//Configurationla yapılan ayarlamalar appsetting.jsondaki verileri alıyor.
+                ValidAudience=builder.Configuration["Token:Audience"],
+                IssuerSigningKey =new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
+                ClockSkew=TimeSpan.Zero
+            };
+
+        });
+
 
         builder.Services.AddControllers();
 
@@ -47,6 +70,8 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
+
+        app.UseAuthentication();//Authorizationdan önce gelmeli.Önce kimlik doğrulaması yapılmalı çünkü
 
         app.UseAuthorization();
 
